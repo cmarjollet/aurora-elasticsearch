@@ -6,9 +6,9 @@ import fr.cma.aurora.model.Measure;
 import org.elasticsearch.client.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class MeasureRepository {
     @Autowired
     private Client elasticsearchClient;

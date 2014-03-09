@@ -264,7 +264,7 @@
   "index": {
     "interval": "none",
     "pattern": "[logstash-]YYYY.MM.DD",
-    "default": "aurora_test",
+    "default": "aurora_power",
     "warm_fields": true
   },
   "style": "dark",

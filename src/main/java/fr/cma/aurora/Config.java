@@ -29,7 +29,7 @@ public class Config {
     @Bean
     public Client elasticsearchClient() {
         return new TransportClient().addTransportAddress(
-                new InetSocketTransportAddress(elasticsearchUrl, elasticsearchPort)
+            new InetSocketTransportAddress(elasticsearchUrl, elasticsearchPort)
         );
     }
 }

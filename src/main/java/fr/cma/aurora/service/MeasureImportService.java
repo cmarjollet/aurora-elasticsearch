@@ -34,10 +34,11 @@ public class MeasureImportService {
 
     public void load() throws IOException {
         for (int year = firstYear; year <= lastYear; year++) {
+            // No data were recorded in 1989 and 1990
             if (year != 1989 && year != 1990) {
                 logger.info("Parsing data of {}", year);
-                MeasureList dataFile = loadDataFromNoaaWebsite(year);
-                saveDataInElasticsearchRepository(dataFile);
+                MeasureList measureList = loadDataFromNoaaWebsite(year);
+                saveDataInElasticsearchRepository(measureList);
             }
         }
     }
@@ -55,8 +56,8 @@ public class MeasureImportService {
         return new MeasureList(year, new FileInputStream(file));
     }
 
-    private void saveDataInElasticsearchRepository(MeasureList dataFile) {
-        for (Measure measure : dataFile) {
+    private void saveDataInElasticsearchRepository(MeasureList measureList) {
+        for (Measure measure : measureList) {
             measureRepository.save(measure);
         }
     }

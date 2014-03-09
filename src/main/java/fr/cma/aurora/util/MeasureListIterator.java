@@ -70,6 +70,7 @@ public class MeasureListIterator implements Iterator<Measure> {
 
     private Measure parseLine(String line) {
         try {
+            // Data format has changed in 2007
             if (year < 2007) {
                 return new MeasureParserLegacy().parseLine(year, line);
             } else {
