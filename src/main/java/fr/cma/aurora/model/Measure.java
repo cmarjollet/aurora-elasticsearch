@@ -1,12 +1,6 @@
 package fr.cma.aurora.model;
 
 import org.joda.time.DateTime;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-
-import java.util.Date;
-
-import static org.springframework.data.elasticsearch.annotations.FieldType.*;
 
 public class Measure {
     private String satellite;

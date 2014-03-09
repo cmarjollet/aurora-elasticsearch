@@ -10,9 +10,6 @@ import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import static java.lang.Integer.parseInt;
-import static org.joda.time.DateTime.parse;
-
 public class MeasureListIterator implements Iterator<Measure> {
     private final int year;
     private final BufferedReader reader;
