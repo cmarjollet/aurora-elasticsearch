@@ -1,4 +1,4 @@
 aurora-elasticsearch
 ====================
 
-Aurora hemispheric power
+Fills hemispheric power measures from NOAA website into an elasticsearch index.
